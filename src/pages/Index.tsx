@@ -21,8 +21,9 @@ const Index = () => {
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#features" className="text-gray-600 hover:text-green-600 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-green-600 transition-colors">How It Works</a>
-            <a href="#pricing" className="text-gray-600 hover:text-green-600 transition-colors">Pricing</a>
+            <Link to="/page/how-it-works" className="text-gray-600 hover:text-green-600 transition-colors">How It Works</Link>
+            <Link to="/products" className="text-gray-600 hover:text-green-600 transition-colors">Products</Link>
+            <Link to="/cms" className="text-gray-600 hover:text-green-600 transition-colors">CMS</Link>
             <Button onClick={() => setShowLogin(true)} className="bg-green-600 hover:bg-green-700">
               Get Started
             </Button>
@@ -52,8 +53,8 @@ const Index = () => {
               Start Your Subscription
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
-              Learn More
+            <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-50" asChild>
+              <Link to="/page/about">Learn More</Link>
             </Button>
           </div>
         </div>

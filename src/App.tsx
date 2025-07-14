@@ -9,6 +9,8 @@ import NotFound from "./pages/NotFound";
 import { SubscriberDashboard } from "./components/dashboard/SubscriberDashboard";
 import { ProductListing } from "./components/products/ProductListing";
 import { OrderTracker } from "./components/tracking/OrderTracker";
+import { CMSDashboard } from "./components/cms/CMSDashboard";
+import { DynamicPage } from "./components/cms/DynamicPage";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,9 @@ const App = () => (
           <Route path="/dashboard" element={<SubscriberDashboard />} />
           <Route path="/products" element={<ProductListing />} />
           <Route path="/track" element={<OrderTracker />} />
+          <Route path="/cms" element={<CMSDashboard />} />
+          <Route path="/page/:slug" element={<DynamicPage />} />
+          <Route path="/preview/:slug" element={<DynamicPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
